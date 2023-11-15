@@ -13,16 +13,19 @@ while not a.isdigit() or a == 0 or a ==1:
     a = input('Ведите число:  ')
     
 a = int(a)   #(n-1)+(num-2)
-fib_0 = 0     #(n-1)
-fib_1 = 0      #(n-2)
-pos = 1
-count = 1
+fib_1 = 1     #(n-1)
+fib_2 = 1      #(n-2)
+pos = 3
+
 while  fib_1 < a  :
-    fib_0 = fib_1
-    fib_1 = pos
-  
+    fib_1 = fib_2
+    fib_2 = pos
     pos = pos + 1
-print(pos)
+    
+if fib_1 !=a:
+    print(-1)
+else:        
+    print(pos -1) # не понятный эфект
 
 
 print('___Вариант№ 2 c сименара____________')
@@ -65,17 +68,18 @@ if n < 0:
 
 print('___Вариант№ 4__не работает__________')
 
-# n_0 = 0 #(n-1)
-# n_1 = 0 #(n-2)
-# a = 5    #(n-1)+(num-2)
-# counter = 1
-# resalt = 0
-# while (resalt < a):
-#     n_0 = n_1
-#     n_1 = resalt
-#     counter = counter+1
-# print(resalt) 
-# if resalt == a:
-#     print(counter)
-# else:
-#     print('-1') 
+
+a = 5    #(n-1)+(num-2)
+n_1 = 0  #(n-1)
+n_2 = 0  #(n-2)
+resalt = 1
+
+while (n_1 < a):
+    n_1 = n_2
+    n_2 = resalt
+    resalt = resalt + 1
+
+if n_1 != a:
+    print(-1) 
+else:
+    print(resalt - 1)  # не понятный эфект
