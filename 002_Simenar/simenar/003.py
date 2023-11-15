@@ -17,4 +17,62 @@
 # Input: 6 -> -20 30 -40 50 10 -10
 # Output: 2
 
-n = int(input('Введите число: '))
+# n = int(input('Введите число: '))
+# if (1<= n <=100):
+#     print(n)
+# else:
+#     print('число не в диапозоне')
+import random
+
+days = [-20, 30, -40, 50, 10, -10]
+for i in range(days):
+       
+    if  i > 0:
+        sum_days = sum_days + 1
+        print(f"Дней когда температура была выше 0: {sum_days}")  
+    else:
+        print("Введён неправельный диапозон дней")
+
+
+
+# array = [-20, 30, -40, 50, 10, -10]
+# def old_array(array ):
+#     if (1<= dyes or dyes <=100):
+#     sum_dyes = int(0)
+# for i in range (array):
+    
+#     if i> 0:
+#         dyes = i + dyes
+        
+#     print((f"Дней когда температура была выше 0: {count}"))
+# else:
+#      print("Введён неправельный диапозон дней")
+        
+        
+        
+# import  random
+
+# n = int(input('Ввидите количество дней: '))
+
+# print( random.randrange(-1, n))
+
+
+# import random
+
+# print("Генерация случайного числа в пределах заданного промежутка")
+# print(random.randint(-10, 50)) 
+
+
+# import random
+ 
+ 
+# print("Генерация случайного числа в пределах заданного промежутка")
+# print(random.randrange(10, 50, 5))
+# print(random.randrange(10, 50, 5))
+
+# import numpy
+
+
+
+# random_integer_array = numpy.random.random_integers(1, 10, 5)
+# print("1-мерный массив случайных целых чисел \n", random_integer_array,"\n")
