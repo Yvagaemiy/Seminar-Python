@@ -40,7 +40,10 @@ num_2 = 1
 while num_1 < a:
     num_1, num_2 = num_1 + num_2 , num_1 # кортеж массива
     pos = pos + 1
-print(pos)
+if num_1 !=a:
+    print(-1)
+else:
+    print(pos)
 
 
 
