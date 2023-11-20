@@ -17,62 +17,82 @@
 # Input: 6 -> -20 30 -40 50 10 -10
 # Output: 2
 
-# n = int(input('Введите число: '))
-# if (1<= n <=100):
-#     print(n)
-# else:
-#     print('число не в диапозоне')
+
+
+
+# Вариант с сименара №1
+
 import random
 
-days = [-20, 30, -40, 50, 10, -10]
-for i in range(days):
-       
-    if  i > 0:
-        sum_days = sum_days + 1
-        print(f"Дней когда температура была выше 0: {sum_days}")  
+day = int(input('Введите кол-во дней : '))
+
+max_day = 0
+count_day = 0
+
+for i in range(day):
+    temper = random.randint(-50, 50)
+    print(temper, end=' ')
+    if temper > 0:
+        count_day = count_day + 1
     else:
-        print("Введён неправельный диапозон дней")
+        if count_day > max_day:
+           max_day = count_day
+           count_day =0
+print()           
+print(f'{max_day = }')
 
-
-
-# array = [-20, 30, -40, 50, 10, -10]
-# def old_array(array ):
-#     if (1<= dyes or dyes <=100):
-#     sum_dyes = int(0)
-# for i in range (array):
+print('_____________________________________')
     
-#     if i> 0:
-#         dyes = i + dyes
+ # Вариант с сименара №2
         
-#     print((f"Дней когда температура была выше 0: {count}"))
-# else:
-#      print("Введён неправельный диапозон дней")
+import random
+
+days = int(input('Введите кол-во дней : '))
+
+max_days = 0
+count_days = 0
+
+for i in range(days):
+    temper = int(input('Введите температуру'))
+    if temper > 0:
+        count_days = count_days + 1
+    
+        if count_days > max_days:
+           max_days = count_days
+          
+    else:
+        count_days =0
+            
+print()           
+print(f'{max_days = }')  
+
+
+print('_____________________________________') 
+
+
+ 
         
-        
-        
-# import  random
+import  random
 
-# n = int(input('Ввидите количество дней: '))
+n = int(input('Ввидите количество дней: '))
 
-# print( random.randrange(-1, n))
+print( random.randrange(-1, n))
 
 
-# import random
+import random
 
-# print("Генерация случайного числа в пределах заданного промежутка")
-# print(random.randint(-10, 50)) 
+print("Генерация случайного числа в пределах заданного промежутка")
+print(random.randint(-10, 50)) 
 
 
-# import random
+import random
  
  
-# print("Генерация случайного числа в пределах заданного промежутка")
-# print(random.randrange(10, 50, 5))
-# print(random.randrange(10, 50, 5))
+print("Генерация случайного числа в пределах заданного промежутка")
+print(random.randrange(10, 50, 5))
+print(random.randrange(10, 50, 5))
 
-# import numpy
+#import numpy
 
-
-
-# random_integer_array = numpy.random.random_integers(1, 10, 5)
-# print("1-мерный массив случайных целых чисел \n", random_integer_array,"\n")
+#random_integer_array = numpy.random.random_integers(1, 10, 5)
+#print("1-мерный массив случайных целых чисел \n", random_integer_array,"\n")
