@@ -9,8 +9,25 @@
 import random
 
 num = int(input('Введите ко-во манеток : '))
+zero = 0
+one = 0
 
-for _ in range(num):
+for i in range(num):
     animal = random.randint(0, 1)
-    print(animal,end=' ')
+    print(animal, end=' ')
+    print()       
+    if  animal == 1:
+        one = one + 1   
+          
+    else:
+        zero = zero + 1
+        
+if zero > one:
+    print('Надо перевернуть ', one, 'орла на решки')
+ 
+elif zero == one:
+    print('Ни чья!!! ') 
     
+else:
+    print('Надо перевернуть ', zero,'решки на орла')
+   
