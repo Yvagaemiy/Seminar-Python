@@ -7,6 +7,39 @@
 # 4 4 -> 2 2
 # 5 6 -> 2 3
 
+print('__Вариант № 1 правельное решение_______________')
+s = 12
+p =27
+
+for x in range(1 , 1000):
+    y = s - x
+    if x <= y and x* y ==p:
+        print(x, y)
+
+print('__Вариант № 2 правельное решение_______________')
+s = 12
+p =27
+
+for x in range(s):
+    for y in range(p):
+      
+        if x <= y and x*y ==p:
+                
+            print(f'x равен = "{x}", y равен =  "{y}"') 
+            
+            
+print('__Вариант № 3 правельное решение_______________')
+
+s = 12
+p =27
+for x in range(1, 1001):
+     y = s - x
+#    if x <= y and x * y == p:
+     if x  <= 1000 and y <= 1000 and x * (s - x ) == p:    
+            print (f'{x}, {y}')
+
+
+
 x = int(input('Введите число x : '))
 y =  int(input('Введите число y : '))
 s = x + y
