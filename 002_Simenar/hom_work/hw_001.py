@@ -5,34 +5,26 @@
 # количество монет, которые нужно перевернуть.
 # 5 -> 1 0 1 1 0
 # 2
-coins = [0, 1, 0, 1, 1, 0]
-
-n = len(coins)
-rez = 0
-for i in len(coins):
-   if coins[i] != coins[i - 1]:
-    rez = rez + 1
-print(f'{rez}')   
 
 
 
-print('__Вариантv №1 не очень рабочий_____________')   
-coins = [1, 1, 1, 0, 0, 1]
+print('__Вариантv №1 с сименара рабочий_____________')   
 
-n = len(coins)
-rez_1 = 0
-rez_2 = 0
-for i in range(1, n):
-    if n > 1:
-        rez_1 = rez_1 + 1
+coins = [0, 1, 0, 1, 1, 1]
+
+mi = 0 
+ma = 0
+
+for i in coins:
+    if i == 0 :
+        mi = mi + 1
     else:
-        rez_2 = rez_2 + 1
-if rez_1 > rez_2:
-    print(rez_2)
-elif  rez_1 == rez_2:   
-    print(rez_1) 
-else:
-    print(rez_1)     
+        ma = ma + 1
+print(min(mi, ma))    
+
+
+
+
 
 print('__Вариантv №2 рабочий_____________')   
 
@@ -44,7 +36,7 @@ one = 0
 
 for i in range(num):
     animal = random.randint(0, 1)
-    print(animal, end= ' ')
+    print(animal,end=' ')
     print()       
     if  animal == 1:
         one = one + 1   
@@ -68,7 +60,7 @@ print('__Вариант с интернета___из группы_____________')
 
     
     
-print('__Вариант с интернета___есть ошибка_____________')   
+print('__Вариант с интернета________________')   
    
 N = int(input('Введите количество монет '))
 orel = reshka = 0
@@ -84,3 +76,35 @@ elif orel == reshka:
     print(f'Количество орлов и решек одинаково, по {orel} штук')
 else:
     print((f'Переверните {reshka} монет с решки на орла, их меньше всего'))
+    
+    
+    
+    
+print('__Вариантv №1 не очень рабочий_____________')   
+coins = [1, 1, 1, 0, 0, 1]
+
+n = len(coins)
+rez_1 = 0
+rez_2 = 0
+for i in range(1, n):
+    if n > 1:
+        rez_1 = rez_1 + 1
+    else:
+        rez_2 = rez_2 + 1
+if rez_1 > rez_2:
+    print(rez_2)
+elif  rez_1 == rez_2:   
+    print(rez_1) 
+else:
+    print(rez_1) 
+    
+    
+coins = [0, 1, 0, 1, 1, 0]
+
+n = len(coins)
+rez = 0
+for i in len(coins):
+   if coins[i] != coins[i - 1]:
+    rez = rez + 1
+print(f'{rez}')   
+            

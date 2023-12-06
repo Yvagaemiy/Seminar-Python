@@ -38,6 +38,45 @@ for x in range(1, 1001):
      if x  <= 1000 and y <= 1000 and x * (s - x ) == p:    
             print (f'{x}, {y}')
 
+print('__Вариант № 4 c сименара правельное решение_______________')
+
+s = 12
+p = 27
+
+num_1 = 0
+num_2 =0
+
+for x in range(s):
+    for y in range(s):
+        if x + y == s and x * y ==p:
+            num_1 = x
+            num_2 = y
+print(min(num_1, num_2), max (num_1, num_2)) 
+
+
+print('__Вариант № 5 c сименара правельное решение_______________')
+
+s = 12
+p = 27
+
+for virst in range(s // 2 + 1):
+    second = s - virst
+    if virst * second == p:
+        break
+print(virst, second)    
+
+print('__Вариант № 6 c сименара правельное решение  но не работает_______________')
+
+s = 12
+p = 27
+
+for virst_1 in range(int(p ** 0.5) +1):
+    second_1 = p / virst_1
+    if virst_1 + second_1 == s:
+        break
+print(virst_1, second_1)
+
+
 
 
 x = int(input('Введите число x : '))
