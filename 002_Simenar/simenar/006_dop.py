@@ -6,7 +6,7 @@ print(а)
 
 text = 'weesgsae rgrtthrrth frge'
 # print(*range(len(text)))  #len пото му что это строка и чтобы пройтись по всей строке используется len, * условия распоковки индекса (0, 24)
-# print(list(range(len(text))))
+# print(з(range(len(text))))
 # for i in range(len(text)) :
 #     print(i, text[i], sep='-',end='-')
     
