@@ -24,5 +24,28 @@ for letter in inp_2:
           coint_dict[letter] = 0 
           output = output + ' '
 print(output)
-           
+
+print('__вариант 2 с get_____________________________________________')
+ 
+  
+input_data = ' a a a b c a a d c d d '.split() 
+res = {}
+for letter in input_data:
+     if letter in res:
+        print(f'{letter}_{res[letter]}', end='')
+     else:
+         print(letter, end='')
+     res[letter] = res.get(letter, 0) + 1  
+     
+print()     
+print('__вариант 3 с get_____________________________________________')
+
+
+input_data = ' a a a b c a a d c d d ' .split()
+res = {}
+for letter in input_data:
+    
+    print(f'{letter}_{res.get(letter, " ")}', end='')
+    res[letter] = res.get(letter, 0) + 1    
+                  
      
