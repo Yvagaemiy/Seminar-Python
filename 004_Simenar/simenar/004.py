@@ -16,7 +16,7 @@
 #Ваня:
 n = int(input('введите число: '))
 max_number = n # 1 max_number = 1000
-while n != 0:
+while n < 0: # 3n != 0 надо избегать не равно 0
  n = int(input('введите следующее число: '))
  if max_number < n:# 2 max_number > n
     max_number = n
