@@ -5,7 +5,23 @@
 # количество монет, которые нужно перевернуть.
 # 5 -> 1 0 1 1 0
 # 2
+print('______вариант с автотестов__________________________________')
 
+coins = [0, 1, 0, 1, 1, 1]
+
+count_zero = 0
+count_one = 0
+
+for coin in coins:
+    if coin == 0:
+        count_zero += 1
+    else:
+        count_one += 1
+
+if count_one > count_zero:
+    print(count_zero)
+else:
+    print(count_one)
 
 
 print('__Вариантv №1 с сименара рабочий_____________')   

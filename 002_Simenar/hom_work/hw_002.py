@@ -6,6 +6,24 @@
 # произведение P. Помогите Кате отгадать задуманные Петей числа.
 # 4 4 -> 2 2
 # 5 6 -> 2 3
+print('______вариант с автотестов__________________________________')
+s = 12
+p =27
+
+solutions = []
+for i in range(1, 1001):
+    for j in range(1, 1001):
+        if s == i + j and p == i * j:
+            solutions.append((min(i, j), max(i, j)))
+solutions = list(set(solutions))
+
+for solution in solutions:
+    print(solution[0], solution[1])
+
+
+
+
+
 
 print('__Вариант № 1 правельное решение_______________')
 s = 12
