@@ -16,11 +16,10 @@ print(type(n_1))
 
  
 m_1 = {randint(1 , 20) for _ in range(int(input('Введите 2 множиство: ')))}     
-print(m_1)
-    
-print() 
+print(m_1) 
 print(type(m_1)) 
 
+print()
 
 res = n_1.intersection(m_1)
-print(res)
+print(*res)
