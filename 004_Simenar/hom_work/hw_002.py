@@ -15,8 +15,51 @@
 # 4 -> 1 2 3 4
 # 9
 #from random import randint
-n = int(input('Введите количество кустов: '))
+# n = int(input('Введите количество кустов: '))
+# res = 0
+# while n != 0 :
+#     res = res + n
+#     n = n - 1
+#     print(n, end=' ')
 
-while n != 0 :
-    print(n, end=' ')
-    n = n - 1
+
+# from random import randint
+# list_1 = list(randint(1, 5) for i in range(int(input("Введите кол-во кустов: "))))
+
+# #list_1 = [1,2,3,4,6,8,7,5,9,5,3,2,4]
+# print(list_1)
+# #a = 4
+# a = int(input('Введите № куста: '))
+# res = 0
+
+
+# if a == len(list_1):
+#     res = list_1[-1] + list_1[-2] + list_1[-3]
+#     print(res)
+# elif a == 1:
+#     res = list_1[0] + list_1[1] + list_1[-1]
+#     print(res)
+
+# else:
+#     res = list_1[a-1] + list_1[a-2] + list_1[a]
+#     print(res)
+# print(res, 'ягод')
+
+
+from random import randint
+
+list_1 = list(randint(1,9) for i in range(int(input("Введите количество кустов: "))))
+print(list_1)
+
+a = int(input("Введите номер куста: "))
+res = 0
+for i in list_1:
+ #   print(list_1)
+    if len(list_1) == 3:
+        res = list_1[0] + list_1 [1] + list_1 [2]
+    elif len(list_1) >=4 or len(list_1) <=1000:
+        res = list_1[a-1]+ list_1[a-2]+ list_1[a-3]
+#        print(res)
+    else:
+        print("кустов больше 1001")
+print(res)
