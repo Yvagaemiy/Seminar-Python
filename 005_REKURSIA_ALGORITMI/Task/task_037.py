@@ -19,4 +19,4 @@ def reverse(num):
                   #  reverse(num - 1 - возврощает функцию в обратном порядке!!!!
 
 n = int(input('Введите вол-во :'))
-print(reverse(n))
+print(reverse(n).lstrip())
