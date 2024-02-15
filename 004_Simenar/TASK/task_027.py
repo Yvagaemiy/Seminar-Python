@@ -37,4 +37,15 @@ for i in list_1:
     else:
         res[i] = 0
         coint = coint + ''
-print(coint)   
+print(coint) 
+
+print('____________________________________________________________--')
+
+texs1 = "She sells sea shells on the sea shore;The shellsthat she sells are sea shells I'm sure.So if she sells seashells on the sea shore,I'm sure that the shells are seashore shells "
+print(texs1.split())
+
+texs2 = texs1.lower().split()
+print(len(texs2))
+print(len(set(texs2)))
+      
+print(len(texs2) - len(set(texs2)))

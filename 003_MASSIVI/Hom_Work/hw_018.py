@@ -9,8 +9,28 @@
 # 1 2 3 4 5
 # 6
 # -> 5
-from random import randint
+print('____Ввариант с Автотестов_________________________')
+list_1 = [1, 2, 3, 4, 5]
+k = 6
+
+# Введите ваше решение ниже
+
+
+m = abs(k - list_1[0])  # модуль числа
+number = list_1[0]
+for i in range(1, len(list_1)):
+    if m > abs(list_1[i] - k):
+        m = abs(list_1[i] - k)
+        number = list_1[i]
+print(number)
+
+
+
+
 print('___Вариант с интернета_______________________________________________')
+
+from random import randint
+
 array_1 = [randint(1, 9) for i in range(int(input('Введите размер массива: ')))]
 print(array_1)
 num = int(input('Введите число Х: '))
