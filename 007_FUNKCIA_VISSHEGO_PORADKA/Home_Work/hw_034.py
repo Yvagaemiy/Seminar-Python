@@ -8,3 +8,45 @@
 # в порядке
 # Ввод: Вывод:
 # пара-ра-рам рам-пам-папам па-ра-па-дам Парам пам-пам
+print('__ВАРИАНТ С АВТОТЕСТОВ_______________________________________')
+
+stroka_1 = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
+
+glasnii = ['а', 'е', 'ё', 'и', 'й', 'о', 'у', 'ы', 'э', 'ю', 'я']
+spisok = stroka_1.split()
+if len(spisok) < 2:
+ print('Количество фраз должно быть больше одной!')
+else:
+ countVowels = []
+
+ for i in spisok:
+  countVowels.append(len([x for x in i if x.lower() in glasnii]))
+
+ if   len(countVowels) == countVowels.count(countVowels[0]):
+  print('Парам пам-пам')
+ else:
+  print('Пам парам')
+
+
+
+
+print('___мой вариант______________________________________')
+
+
+def vini_pyx(spisok):
+    spisok = spisok.split()# из vini_pyx(spisok) взяли spisok и присвоили функцию
+    list_1 = []
+    for word in spisok:
+        sum_word = 0
+        for i in word:
+            if i in 'йуеыаоэюяи':
+                sum_word+=1
+        list_1.append(sum_word)
+    return len( list_1) ==  list_1.count( list_1[0])
+
+
+stroka_1 = ' пара-ра-рам рам-пам-папам па-ра-па-дам '
+if  vini_pyx(stroka_1):
+    print('Парам пам-пам')
+else:
+    print('Пам парам')
