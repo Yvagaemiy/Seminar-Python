@@ -27,8 +27,7 @@ def data_address():
     return input('Введите Адрес:')
 
 
-def create_contact():# функция создоет контакт
-    
+def create_contact():# функция создоет контакт   
     surname = data_surname()
     name    = data_name()
     phon    = data_phon()
@@ -38,43 +37,63 @@ def create_contact():# функция создоет контакт
 
 def wrait_contakt(): #  функция записывает контакт
     contact = create_contact()
-    with open('phonebooks.txt','a') as file:
+    with open('phonebooks.txt','a', encoding= 'utf - 8') as file:
         file.write(contact)
-        print('контакт записан!')
+    print('\nКонтакт записан!\n')
 
 
 def print_contact():# распечатать_контакт
-    pass
+   with open('phonebooks.txt','r',encoding='utf-8')as fail:
+       print('__________________')
+       #print(fail.read())
+       print('__________________')
 
-def search_contact(field):# поиск_контакта аргумет облась/поле/пространство
-    pass
+def search_contact():# поиск_контакта аргумет облась/поле/пространство //='' - 'значение по умолчанию что бы функция работала
+    search = input('Введите данные поиска: ')
+    with open('phonebooks.txt','r',encoding='utf-8')as fail:
+        contat_str = fail.read()
+#    print([contat_str])  # [data_str] - в [] выводит все в строку
+    contat_list = contat_str.rstrip().split('\n\n') #  split     По умолчанию метод разделяет строку по пробелам.
+                                                    # rstrip() - убирает пустое место с права так как r
+#    print(contat_list)
+       
+    for contact in contat_list:
+       
+        if search in contact:
+            print(contact)
+        #     print()
+           
+       
 
-def user_intrface():# пользовательское меню
+
+def intrface():# пользовательское меню
     with open('phonebooks.txt','a'):# with - это с/вместе с
         pass
     user_input = None
     while user_input != '4':
-     print(
+        print(
             "Возможные варианты действия :\n"
               "1. Добавить контакт\n"
               "2. Вывод списка контактов\n"
               "3. Поиск контактов\n"
               "4. Выход из программы"
               )
-    user_input = input('Введите вариант: ')
-    while user_input not in ('1','2','3','4'):
-        print('Некорректный ввод!')
-        user_input = input('Введите коректный вариант: ')
+        user_input = input('Введите вариант: ')
+        while user_input not in ('1','2','3','4'):
+            print('Некорректный ввод!')
+            user_input = input('Введите коректный вариант: ')
 
-    match user_input:   # функция кейсов
-        case '1': # если ввели '1' то проваливаемся в create_contact()
-            create_contact()
-        case '2':
-            print_contact()
-        case '3':
-            search_contact(field)
+        print()    
+
+        match user_input:   # функция кейсов
+            case '1': # если ввели '1' то проваливаемся в create_contact()
+                wrait_contakt()
+            case '2':
+                print_contact()
+            case '3':
+                search_contact()
         
 
 
-if __name__ == '__task_055__':
-    user_intrface()
+if __name__ == '__main__':
+    intrface()
