@@ -19,13 +19,13 @@ if len(spisok) < 2:
 else:
  countVowels = []
 
- for i in spisok:
-  countVowels.append(len([x for x in i if x.lower() in glasnii]))
+for i in spisok:
+    countVowels.append(len([x for x in i if x.lower() in glasnii]))
 
- if   len(countVowels) == countVowels.count(countVowels[0]):
-  print('Парам пам-пам')
- else:
-  print('Пам парам')
+if  len(countVowels) == countVowels.count(countVowels[0]):
+    print('Парам пам-пам')
+else:
+    print('Пам парам')
 
 
 
@@ -50,3 +50,41 @@ if  vini_pyx(stroka_1):
     print('Парам пам-пам')
 else:
     print('Пам парам')
+
+
+print('____еще вариант_1_____'*2)
+
+def sum_vowletes(fraza):
+    vow_let = 'йуеыаоэюяи'
+    count_0=0
+    for i in fraza:
+        if i in vow_let:
+           count_0+=1
+    return count_0     
+   
+def chekund_count(fraza_list):
+    vowel_0 = sum_vowletes(fraza_list[0])
+    for fraza in fraza_list[:1]:
+        if sum_vowletes(fraza) != vowel_0 :
+            return 'Пам парам'
+        
+    return 'Парам пам-пам'
+   
+
+stroka_1 =  ' пара-ра-рам рам-пам-папам па-ра-па-дам '.split()
+
+print(chekund_count(stroka_1))
+
+print('____еще вариант_2_____'*2)
+
+def rifma(poem):
+    phraza_list = poem.lower().split()
+    sum_vowelse = lambda phraza: sum(1  for i in phraza if i in 'йуеыаоэюяи')
+    tmp = sum_vowelse(phraza_list[0])
+    if all([sum_vowelse(phraza) == tmp for phraza in phraza_list[1:]]):
+        return 'Парам пам-пам'
+    return 'Пам парам'
+print(rifma('пара-ра-рам рам-пам-папам па-ра-па-дам '))
+      
+
+      

@@ -19,9 +19,9 @@ print('_____Вариант с сименара 1________________________________
 
 
 def same_by_1(characteristic, objects):
-    check = characteristic(objects[0])
-    for num in objects[1:]:
-        if  check != characteristic(num):
+    check = characteristic(objects[0]) # находим первое значение с 0 индексом
+    for num in objects[1:]:    # проходм начиная с 1 индекса
+        if  check != characteristic(num): 
             return False
     return True 
 values = [0, 2, 10, 6]

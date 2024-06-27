@@ -43,7 +43,7 @@ def print_operation_table(operation, num_rows, num_columns):
        # vowels_str = ",".join(vowels)
        # print("Строка гласных:", vowels_str)
 
-print_operation_table(lambda x, y: x * y, 3 , 3)
+print_operation_table(lambda x, y: x * y, 6 , 6)
 
 print('_____вариант с интернета_1_________________________________________-')
 

@@ -52,7 +52,7 @@ def find_farthest_orbit(list_of_orbits):
     list_max_orbits = [pi * a * b for a, b in list_of_orbits]# зи списка картежей считаем площади
     max_orbits = max(list_max_orbits) # переменная определяет мах площадь
     i_max_orbits = list_max_orbits.index(max_orbits) # переменная находит из списка list_max_orbits индексы мах площади
-    return list_of_orbits[i_max_orbits] # возврощаем список с мах площадью переведенную вскартеж
+    return list_of_orbits[i_max_orbits] # возврощаем список с мах площадью индекс переведенную вскартеж
 #    return [list_of_orbits[i] for i in range(len(list_of_orbits)) if list_max_orbits[i] == max_orbits][0] #  [0] - что бы распокавать 
                                                                                                            # картеж от скобок!!!!                      
 
@@ -69,7 +69,8 @@ def find_farthest_orbit(list_of_orbits):
     print(list1)
     list_s = [(pi * i[0] *i[1])for i in list1] # функция которая ищит площадь
     print(list_s)
-    max_s = list_s.index(max(list_s)) # переменная которая через функцию мах ищит максимальную площадь из списка list_s
+    max_s = list_s.index(max(list_s)) # переменная которая через функцию мах ищит максимальную площадь и индекс из списка list_s
+    #                                                                                     и возврощает индек максимального числа
     print(max_s)
     return list1[max_s]
    
